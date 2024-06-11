@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     fetch("https://xcountries-backend.azurewebsites.net/all")
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => setCountries(data))
       .catch((error) => console.error("Error fetching data: ", error));
   }, []);
 
