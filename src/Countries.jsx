@@ -4,7 +4,7 @@ function App() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch("https://xcountriesapi.onrender.com/all")
+    fetch("https://xcountries-backend.azurewebsites.net/all")
       .then((response) => response.json())
       .then((data) => setCountries(data))
       .catch((error) => console.error("Error fetching data: ", error));
