@@ -37,7 +37,10 @@ function App() {
 
   return (
     <div style={containerStyle}>
-      {countries.map((country) => (
+      {countries.map((country) => 
+      {
+      console.log(country);
+      return (
         <div key={country.abbr} style={cardStyle}>
           <img
             src={country.flag}
@@ -46,7 +49,8 @@ function App() {
           />
           <h2>{country.name}</h2>
         </div>
-      ))}
+      )
+      })}
     </div>
   );
 }
